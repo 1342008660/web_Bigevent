@@ -70,7 +70,7 @@ $(function () {
                 }
                 layer.msg('登陆成功')
 
-                localStorage.setItem('toten',res.toten);
+                localStorage.setItem('token',res.token);
                 location.href = '/index.html'
                 // location.href = '/index.html'
             }
