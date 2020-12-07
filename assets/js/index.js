@@ -9,7 +9,7 @@ $(function () {
 
     // 调用 getUserInfo 获取用户信息
     getUserInfo();
-
+    
     var layer = layui.layer
     $('#btnLogout').on('click', function () {
         // 提示音用户确认是否退出
@@ -35,15 +35,14 @@ function getUserInfo() {
         //     Authorization: localStorage.getItem('token') || ''
         // },
         success: function (res) {  //请求成功回调
-            console.log(localStorage.getItem('token'));
-            console.log(res);
+            // console.log(localStorage.getItem('token'));
+            // console.log(res);
 
             if (res.status !== 0) {
                 return layui.layer.msg('用户信息获取失败！')
             }
-            layer.msg('登陆成功')
             renderAvatar(res.data)
-        },
+        }
         // complete: function (res) {
 
         //     console.log(res.responseJSON.status);
@@ -58,7 +57,7 @@ function getUserInfo() {
 
 // 渲染用户的头像
 function renderAvatar(user) {
-    var name = user.nicknam || user.username;
+    var name = user.nickname || user.username;
     $('#welcome').html('欢迎&nbsp;&nbsp;' + name)
     // 按需渲染头像
     if (user.user_pic !== null) {

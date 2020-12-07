@@ -1,0 +1,19 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f2f3f5;
+  padding: 15px;
+}
+form {
+  width: 500px;
+}
+
+
+.layui-form .layui-form-item:nth-child(1) .layui-input{
+  color: #ccc !important;
+}
+
